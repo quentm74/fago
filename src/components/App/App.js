@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 const App = () => {
   const classes = useStyles();
 
-  const [step, setStep] = useState(STEPS.SCAN);
+  const [step, setStep] = useState(STEPS.RESULTS);
   const [barcode, setBarcode] = useState(null);
 
   return (

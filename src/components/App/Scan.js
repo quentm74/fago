@@ -18,7 +18,7 @@ export const Scan = ({nextStep}) => {
   return (
     <div className={classes.root}>
       <Typography variant="h2">Scannez pour recycler !</Typography>
-      <Typography variant="subtitle1">bla bla bla</Typography>
+      <Typography variant="subtitle1">Prenez une photo du code barre de votre produit, nous nous occupons du reste !</Typography>
       <Webcam nextStep={nextStep}/>
     </div>
   );
