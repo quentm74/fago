@@ -2,21 +2,6 @@ img {
     border: none !important;
 }
 
-.slides {
-    margin-top: calc((var(--header-level1-height) + var(--header-level2-height) - var(--footer-height)) / 2) !important;
-}
-
-.controls {
-    bottom: calc(12px + var(--footer-height)) !important;
-    color: var(--main-color) !important;
-}
-
-.em, .em-svg {
-    width: 1.2em;
-    height: 1.2em;
-    margin-left: 5px;
-}
-
-* {
-    list-style-type: "-  ";
+body, html {
+    margin: 0;
 }
