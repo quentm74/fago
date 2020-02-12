@@ -798,7 +798,7 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.3.tgz#f060bf6eaafae4d56a7dac618980838b0696e2ab"
   integrity sha512-FmuxfCuolpLl0AnQ2NHSzoUKWEJDFl63qXjzdoWBVyFCXzMGm1spBzk7LeHNoVCiWCF7mRVms9e6jEV9+MoPbg==
 
-"@material-ui/core@^4.9.2":
+"@material-ui/core@^4.0.0":
   version "4.9.2"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.9.2.tgz#23c9a697af15d8daf56ffad1955b24209ef48106"
   integrity sha512-fSf/yBuE5GR7dA+FiQAAGY7HrCN/8RaYApi9tx3IKMiJIJkRCHk+E2lktgJZ+QRsaqCACLo2lwhU2CW5aeO0UQ==
@@ -941,7 +941,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^16.8.6":
   version "16.9.19"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.19.tgz#c842aa83ea490007d29938146ff2e4d9e4360c40"
   integrity sha512-LJV97//H+zqKWMms0kvxaKYJDG05U2TtQB3chRLF8MPNs+MQh/H1aGlyDUxjaHvu08EAGerdX2z4LTBc7ns77A==
@@ -4575,7 +4575,7 @@ range-parser@~1.2.1:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-react-dom@^16.12.0:
+react-dom@>=15.3.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
   integrity sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw==
@@ -4605,7 +4605,7 @@ react-webcam@^5.0.0:
   resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-5.0.0.tgz#d038176ccca054c9f8e2ec232b6d2c754de14b02"
   integrity sha512-q0IzkXPtKQ/lHvhfeYQNjhmvwC2ItpquN0vPsIXcZDvrXn8c+cMszkNeS2i5/tDhjVUEIoS5Al0ZEhyrmQ4I3A==
 
-react@^16.12.0:
+react@>=15.3.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==

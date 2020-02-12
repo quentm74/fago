@@ -6,9 +6,10 @@ import WebcamL from "react-webcam";
 const useStyles = makeStyles(theme => ({
   Webcam: {
     backgroundColor: '#eee',
-    width: '55vh',
-    height: '55vh',
-    marginTop: 30,
+    width: 400,
+    height: 300,
+    marginTop: 50,
+    marginBottom: 20,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -33,18 +34,33 @@ export const Webcam = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className={classes.Webcam}>
+    <React.Fragment>
       {active ? (
         <React.Fragment>
-          <WebcamL videoConstraints={{deviceId: -1}} ref={null}/>
+        <div className={classes.Webcam}>
+    
+          <WebcamL 
+          videoConstraints={{
+            height:1280,
+            width:720,
+            deviceId: -1}} 
+          ref={null}
+          height={300}
+          width={400}
+          />
+          </div>
           <Button className={classes.btn_relative} variant="contained" color="primary"
                   onClick={_ => setActive(true)}>Scan</Button>
+                  
         </React.Fragment>
       ) : (
+        
+        <div className={classes.Webcam}>
         <Button className={classes.btn} variant="contained" color="primary" onClick={_ => setActive(true)}>Commencer à
           scanner</Button>
+          </div>
       )}
-    </div>
+    </React.Fragment>
   );
 };
 
