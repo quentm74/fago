@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const Webcam = () => {
+export const Webcam = ({nextStep}) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 
@@ -50,7 +50,7 @@ export const Webcam = () => {
           />
           </div>
           <Button className={classes.btn_relative} variant="contained" color="primary"
-                  onClick={_ => setActive(true)}>Scan</Button>
+                  onClick={nextStep}>Scan</Button>
                   
         </React.Fragment>
       ) : (

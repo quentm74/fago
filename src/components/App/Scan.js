@@ -13,13 +13,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const Scan = () => {
+export const Scan = ({nextStep}) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Typography variant="h2">Scannez pour recycler !!</Typography>
+      <Typography variant="h2">Scannez pour recycler !</Typography>
       <Typography variant="subtitle1">bla bla bla</Typography>
-      <Webcam/>
+      <Webcam nextStep={nextStep}/>
     </div>
   );
 };
