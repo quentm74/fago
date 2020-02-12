@@ -6,13 +6,18 @@ import WebcamL from "react-webcam";
 const useStyles = makeStyles(theme => ({
   Webcam: {
     backgroundColor: '#eee',
-    width: '50vh',
-    height: '50vh',
+    width: '55vh',
+    height: '55vh',
     marginTop: 30,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
+  btn: {
+    borderRadius: 40,
+    fontSize: '1.4em',
+    padding: "20px 35px",
+  },
 }));
 
 export const Webcam = () => {
@@ -27,7 +32,7 @@ export const Webcam = () => {
 
   return (
     <div className={classes.Webcam}>
-      <Button variant="contained" color="primary" onClick={_ => setActive(true)}>Commencer à scanner</Button>
+      <Button className={classes.btn} variant="contained" color="primary" onClick={_ => setActive(true)}>Commencer à scanner</Button>
     </div>
   );
 };
