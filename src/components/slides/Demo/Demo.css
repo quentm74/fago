@@ -1,0 +1,12 @@
+.server_img {
+    max-width: none !important;
+    max-height: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #f6f8fa !important;
+    box-shadow: none !important;
+    width: 50vw;
+}

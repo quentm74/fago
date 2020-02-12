@@ -1,0 +1,17 @@
+:root {
+    --main-color: #222;
+    --secondary-color: #555;
+    --third-color: #ffff00;
+
+    --header-font-size: 26px;
+    --header-level1-bg-color: var(--main-color);
+    --header-level1-height: 45px;
+    --header-level2-bg-color: var(--secondary-color);
+    --header-level2-height: 45px;
+
+    /*--progress-color: #fff7;*/
+    --progress-color: var(--secondary-color);
+    --footer-bg-color: var(--main-color);
+    --footer-height: 45px;
+    --footer-font-size: 23px;
+}

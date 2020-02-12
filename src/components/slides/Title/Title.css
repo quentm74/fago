@@ -1,0 +1,19 @@
+.title {
+    padding-bottom: 40px;
+    font-size: 70px;
+    font-weight: bold;
+}
+.title > mark {
+    background-color: var(--third-color);
+}
+
+.names {
+    padding-top: 30px;
+    font-size: 25px;
+    margin-bottom: calc((var(--header-level1-height) + var(--header-level2-height) - var(--footer-height)) / 2) !important;;
+}
+
+.link {
+    color: #999 !important;
+    font-size: 21px;
+}
