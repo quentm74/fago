@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => ({
     height: '55vh',
     marginTop: 30,
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -18,21 +19,31 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.4em',
     padding: "20px 35px",
   },
+  btn_relative: {
+    borderRadius: 40,
+    fontSize: '1.4em',
+    padding: "20px 45px",
+    position: 'relative',
+    top: -110,
+  },
 }));
 
 export const Webcam = () => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 
-  if (active) {
-    return (
-      <WebcamL videoConstraints={{deviceId: -1}} ref={null}/>
-    );
-  }
-
   return (
     <div className={classes.Webcam}>
-      <Button className={classes.btn} variant="contained" color="primary" onClick={_ => setActive(true)}>Commencer à scanner</Button>
+      {active ? (
+        <React.Fragment>
+          <WebcamL videoConstraints={{deviceId: -1}} ref={null}/>
+          <Button className={classes.btn_relative} variant="contained" color="primary"
+                  onClick={_ => setActive(true)}>Scan</Button>
+        </React.Fragment>
+      ) : (
+        <Button className={classes.btn} variant="contained" color="primary" onClick={_ => setActive(true)}>Commencer à
+          scanner</Button>
+      )}
     </div>
   );
 };
