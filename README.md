@@ -1,30 +1,38 @@
-# bov-slides
+# fago
 
-## See online version
+Projet de séminaire
 
-[https://quentm74.github.io/bov-slides/index.html#/](https://quentm74.github.io/bov-slides/index.html#/)
+## flux de données
 
-## Building and running on localhost
+ex:
 
-First install dependencies:
+"bouteille d'eau évian" -> "bouteille", "eau", "evian" -> "bouteille plastique" -> jaune
+"maïs géantvert" -> "conserve" -> jaune non lavée
 
-```sh
-yarn
-```
+(1) texte français -> (2) mots clés -> (3) choix produit -> (4) catégorie de recyclage -> (5) poubelle associée
 
-To run in hot module reloading mode:
+### 1 -> 2
 
-```sh
-yarn start
-```
+API mots clés IA
 
-To create a production build:
+### 2 -> 3
 
-```sh
-yarn build-prod
-```
+DB produits
 
-## Running
+### 3 -> 4
 
-Open the file `dist/index.html` in your browser
+DB produits
 
+### 4 -> 5
+
+DB mairie
+
+## DB produits
+
+PRODUIT
+COUCHE (ex: boite, film plastique)
+
+## DB mairie / nos consts
+
+CATEGORIE
+POUBELLE
