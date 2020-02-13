@@ -113,15 +113,15 @@ const LOCALIZATION = Object.freeze({
 export const Results = () => {
   const classes = useStyles();
 
-  const [localization, setLocalization] = useState(LOCALIZATION.RENNES);
+  const [localization, setLocalization] = useState(LOCALIZATION.NONE);
 
   return (
     <div className={classes.root}>
       <div className={classes.found}>
-        <Typography variant="h2" color="primary" className={classes.foundText}>
+        <Typography variant="h3" color="primary" className={classes.foundText}>
           <Check fontSize="large" color="primary"/> Trouvé !
         </Typography>
-        <Typography variant="h2">Nettoyant multi surface</Typography>
+        <Typography variant="h3">[3663590008572] Nettoyant multi surface</Typography>
       </div>
       <div className={classes.dividerContainer}>
         <Divider orientation="horizontal"/>
@@ -136,7 +136,8 @@ export const Results = () => {
               className={classes.input}
               placeholder="Chercher votre ville"
             />
-            <IconButton type="submit" className={classes.iconButton} aria-label="search">
+            <IconButton type="button" className={classes.iconButton} aria-label="search"
+                        onClick={() => setLocalization(LOCALIZATION.RENNES)}>
               <SearchIcon/>
             </IconButton>
             <IconButton color="primary" className={classes.iconButton} aria-label="directions">
@@ -148,7 +149,8 @@ export const Results = () => {
           <Typography variant="h5">OU</Typography>
         </Grid>
         <Grid item xs={5} className={classes.gridItem}>
-          <Button variant="contained" className={classes.generals}>Resultats généraux</Button>
+          <Button variant="contained" className={classes.generals}
+                  onClick={() => setLocalization(LOCALIZATION.DEFAULT)}>Resultats généraux</Button>
         </Grid>
       </Grid>
       <div className={classes.dividerContainer}>
@@ -209,6 +211,56 @@ export const Results = () => {
                 vos bouchons en plastique ou liège à un point de collecte, l'association les recyclera et reversera les
                 fonds à des projets pour les personnes handicapées. Vous trouverez un point de collecte à la biocoop 32
                 Boulevard de Groslay
+              </Typography>
+            </Paper>
+          </Grid>
+        </Grid>
+      )}
+      {localization === LOCALIZATION.DEFAULT && (
+        <Grid container spacing={3} className={classes.grid}>
+          <Grid item xs={2} className={classes.gridItemtype}>
+            <Typography color="primary" variant="h4">Bouteille</Typography>
+          </Grid>
+          <Grid item xs={3} className={classes.gridIcons}>
+            <Divider orientation="vertical"/>
+            <div className={classes.icons}>
+              <Paper className={classes.paperIcon}>
+                <Sync fontSize="large" className={classes.sync}/>
+              </Paper>
+              <Paper className={classes.paperIcon}>
+                <Delete fontSize="large" className={classes.deleteY}/>
+              </Paper>
+            </div>
+          </Grid>
+          <Grid item xs={7} className={classes.gridItem}>
+            <Paper className={classes.paperInfos}>
+              <Typography variant="h5">Informations complémentaires</Typography>
+              <Typography variant="subtitle1">Le plastique d'une bouteille peut servir à fabriquer une autre bouteille
+                en plastique. On utilise également le plastique recyclé pour fabriquer des objets. Ainsi, avec 6
+                bouteilles d'eau recyclées, on fabrique un ours en peluche.
+              </Typography>
+            </Paper>
+          </Grid>
+          <Grid item xs={2} className={classes.gridItemtype}>
+            <Typography color="primary" variant="h4">Bouchon</Typography>
+          </Grid>
+          <Grid item xs={3} className={classes.gridIcons}>
+            <Divider orientation="vertical"/>
+            <div className={classes.icons}>
+              <Paper className={classes.paperIcon}>
+                <Sync fontSize="large" className={classes.sync}/>
+              </Paper>
+              <Paper className={classes.paperIcon}>
+                <Delete fontSize="large" className={classes.deleteY}/>
+              </Paper>
+            </div>
+          </Grid>
+          <Grid item xs={7} className={classes.gridItem}>
+            <Paper className={classes.paperInfos}>
+              <Typography variant="h5">Informations complémentaires</Typography>
+              <Typography variant="subtitle1">Les bouchons en plastique se recyclent et sont à trier avec leur
+                bouteille. Exemples : Les bouchons de bouteilles d'eau, de bouteilles de sodas ou de bouteilles de lait
+                en plastique.
               </Typography>
             </Paper>
           </Grid>
