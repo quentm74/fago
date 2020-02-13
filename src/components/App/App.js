@@ -44,6 +44,12 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     height: 64,
+    fontFamily: 'Montserrat',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'white',
+    fontSize: '2.7em',
   },
   spacing: {
     flexGrow: 1,
@@ -63,7 +69,7 @@ const App = () => {
     <div className={styles.App}>
       <AppBar position="static">
         <Toolbar>
-          <img src={fago} alt="fago" className={classes.logo}/>
+          <span className={classes.logo}>fago</span>
           <div className={classes.spacing}></div>
           <Button color="inherit" variant="contained">Connexion</Button>
         </Toolbar>
