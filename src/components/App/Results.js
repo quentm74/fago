@@ -17,13 +17,12 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: '10vh',
   },
   locationInput: {
     padding: '2px 4px',
     display: 'flex',
     alignItems: 'center',
-    width: 400,
+    width: '100%',
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -32,13 +31,11 @@ const useStyles = makeStyles(theme => ({
   iconButton: {
     padding: 10,
   },
-  divider: {
-    height: 28,
-    margin: 4,
-  },
   found: {
     width: '100%',
     display: 'flex',
+    paddingTop: '8vh',
+    paddingBottom: 'calc(8vh - 40px)',
   },
   foundText: {
     marginLeft: 30,
@@ -52,11 +49,19 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  divider: {
+    height: 28,
+    margin: 4,
+  },
   dividerContainer: {
     display: 'block',
     width: '100%',
     marginTop: 40,
     marginBottom: 40,
+  },
+  generals: {
+    width: '100%',
+    backgroundColor: '#eeeeee',
   },
 }));
 
@@ -65,9 +70,9 @@ export const Results = () => {
   return (
     <div className={classes.root}>
       <div className={classes.found}>
-        <Typography variant="h2" color="primary" className={classes.foundText}><Check fontSize="large"
-                                                                                      color="primary"/> Trouvé
-          !</Typography>
+        <Typography variant="h2" color="primary" className={classes.foundText}>
+          <Check fontSize="large" color="primary"/> Trouvé !
+        </Typography>
         <Typography variant="h2">Nettoyant multi surface</Typography>
       </div>
       <div className={classes.dividerContainer}>
@@ -76,7 +81,7 @@ export const Results = () => {
       <Grid container spacing={3} className={classes.grid}>
         <Grid item xs={5} className={classes.gridItem}>
           <Paper component="form" className={classes.locationInput}>
-            <IconButton className={classes.iconButton} aria-label="menu">
+            <IconButton color="primary" className={classes.iconButton} aria-label="menu">
               <Place/>
             </IconButton>
             <InputBase
@@ -86,7 +91,6 @@ export const Results = () => {
             <IconButton type="submit" className={classes.iconButton} aria-label="search">
               <SearchIcon/>
             </IconButton>
-            <Divider className={classes.divider} orientation="vertical"/>
             <IconButton color="primary" className={classes.iconButton} aria-label="directions">
               <MyLocation/>
             </IconButton>
@@ -96,11 +100,14 @@ export const Results = () => {
           <Typography variant="h5">OU</Typography>
         </Grid>
         <Grid item xs={5} className={classes.gridItem}>
-          <Button variant="contained" color="#eeeeee">Resultats généraux</Button>
+          <Button variant="contained" className={classes.generals}>Resultats généraux</Button>
         </Grid>
       </Grid>
-      <ul><Typography variant="h6">Bouteille plastique: A TRIER - déposer dans une poubelle jaune</Typography></ul>
-      <ul><Typography variant="h6">Bouteille plastique: A TRIER - déposer dans une poubelle jaune</Typography></ul>
+      <div className={classes.dividerContainer}>
+        <Divider orientation="horizontal"/>
+      </div>
+      {/*<ul><Typography variant="h6">Bouteille plastique: A TRIER - déposer dans une poubelle jaune</Typography></ul>*/}
+      {/*<ul><Typography variant="h6">Bouteille plastique: A TRIER - déposer dans une poubelle jaune</Typography></ul>*/}
     </div>
   );
 };
