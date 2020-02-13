@@ -6,11 +6,10 @@ import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider'
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import DirectionsIcon from '@material-ui/icons/Directions';
 import Button from "@material-ui/core/Button";
 import {Check, MyLocation, Place} from "@material-ui/icons";
+import fago from "./fago.png";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,6 +31,7 @@ const useStyles = makeStyles(theme => ({
     padding: 10,
   },
   found: {
+    height: '5vh',
     width: '100%',
     display: 'flex',
     paddingTop: '8vh',
@@ -42,6 +42,7 @@ const useStyles = makeStyles(theme => ({
     marginRight: 50,
   },
   grid: {
+    height: '10vh',
   },
   gridItem: {
     display: 'flex',
@@ -62,6 +63,13 @@ const useStyles = makeStyles(theme => ({
   generals: {
     width: '100%',
     backgroundColor: '#eeeeee',
+  },
+  imgContainer: {
+    height: "calc(50vh - 64px)",
+    overflow: 'hidden',
+    "& > img": {
+      height: '100%',
+    }
   },
 }));
 
@@ -105,6 +113,9 @@ export const Results = () => {
       </Grid>
       <div className={classes.dividerContainer}>
         <Divider orientation="horizontal"/>
+      </div>
+      <div className={classes.imgContainer}>
+        <img src={fago} alt="fago"/>
       </div>
       {/*<ul><Typography variant="h6">Bouteille plastique: A TRIER - déposer dans une poubelle jaune</Typography></ul>*/}
       {/*<ul><Typography variant="h6">Bouteille plastique: A TRIER - déposer dans une poubelle jaune</Typography></ul>*/}
