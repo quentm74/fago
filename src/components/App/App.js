@@ -12,6 +12,7 @@ import IconButton from "@material-ui/core/IconButton";
 import {Menu} from "@material-ui/icons";
 import {Scan} from "./Scan";
 import {Results} from "./Results";
+import fago from "./fagoW.png";
 
 const theme = createMuiTheme({
   palette: {
@@ -41,10 +42,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  logo: {
+    height: 64,
   },
-  title: {
+  spacing: {
     flexGrow: 1,
   },
   container: {
@@ -62,13 +63,9 @@ const App = () => {
     <div className={styles.App}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="secondary">
-            <Menu/>
-          </IconButton>
-          <Typography variant="h6" className={classes.title} color="secondary">
-            Fago
-          </Typography>
-          <Button color="inherit">Login</Button>
+          <img src={fago} alt="fago" className={classes.logo}/>
+          <div className={classes.spacing}></div>
+          <Button color="inherit" variant="contained">Connexion</Button>
         </Toolbar>
       </AppBar>
       <div className={classes.container}>
