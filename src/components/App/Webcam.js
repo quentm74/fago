@@ -37,28 +37,29 @@ export const Webcam = ({nextStep}) => {
     <React.Fragment>
       {active ? (
         <React.Fragment>
-        <div className={classes.Webcam}>
-    
-          <WebcamL 
-          videoConstraints={{
-            height:1280,
-            width:720,
-            deviceId: -1}} 
-          ref={null}
-          height={300}
-          width={400}
-          />
+          <div className={classes.Webcam}>
+
+            <WebcamL
+              videoConstraints={{
+                height: 1280,
+                width: 720,
+                deviceId: -1
+              }}
+              ref={null}
+              height={300}
+              width={400}
+            />
           </div>
           <Button className={classes.btn_relative} variant="contained" color="primary"
                   onClick={nextStep}>Scan</Button>
-                  
+
         </React.Fragment>
       ) : (
-        
+
         <div className={classes.Webcam}>
-        <Button className={classes.btn} variant="contained" color="primary" onClick={_ => setActive(true)}>Commencer à
-          scanner</Button>
-          </div>
+          <Button className={classes.btn} variant="contained" color="primary" onClick={_ => setActive(true)}>Commencer à
+            scanner</Button>
+        </div>
       )}
     </React.Fragment>
   );
