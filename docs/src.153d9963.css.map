@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css","App.css"],"names":[],"mappings":"AAAA,IACI,qBACJ,CAEA,UACI,QACJ,CCNA,eACE,YAAa,CACb,WAEF","file":"src.153d9963.css","sourceRoot":"../src","sourcesContent":["img {\n    border: none !important;\n}\n\nbody, html {\n    margin: 0;\n}",".Webcam {\n  height: 100vh;\n  width: 100vw;\n\n}\n"]}
